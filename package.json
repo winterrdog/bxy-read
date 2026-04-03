@@ -1,8 +1,8 @@
 {
-  "name": "@gladtek/cooper",
+  "name": "@bxy/bxy-read",
   "type": "module",
   "version": "1.1.0",
-  "description": "A premium Astro template engineered for the unknown. Built for speed, endurance, and exploration.",
+  "description": "An Astro blog engineered for the unknown. Built for speed, endurance, and exploration.",
   "engines": {
     "node": ">=22.12.0"
   },
@@ -10,12 +10,9 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "build:vercel": "cross-env ADAPTER=vercel astro build",
-    "build:netlify": "cross-env ADAPTER=netlify astro build",
     "build:cloudflare": "cross-env ADAPTER=cloudflare astro build",
     "preview": "astro preview",
-    "deploy": "wrangler deploy",
-    "preview:worker": "wrangler dev",
+    "deploy": "npm run build:cloudflare && wrangler pages deploy ./dist --project-name=\"blog-deployment\"",
     "astro": "astro"
   },
   "dependencies": {

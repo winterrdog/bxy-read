@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import Fuse from 'fuse.js';
 
 const POPULAR_LINKS = [
-  { label: "Getting Started", href: "/docs/getting-started/", icon: Book, localize: false },
-  { label: "Features", href: "/features/", icon: Zap },
-  { label: "Design System", href: "/design/", icon: LayoutGrid },
+  // { label: "Getting Started", href: "/docs/getting-started/", icon: Book, localize: false },
+  // { label: "Features", href: "/features/", icon: Zap },
+  // { label: "Design System", href: "/design/", icon: LayoutGrid },
   { label: "Blog", href: "/blog/", icon: FileText },
 ];
 

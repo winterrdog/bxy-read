@@ -1,132 +1,170 @@
-
-
 export const siteConfig = {
-  name: 'Cooper',
-  description: 'Premium Astro Boilerplate for explorers.',
+  name: "Bixy Stays Blog",
+  description:
+    "Book apartments, hotels, lodges, and vacation rentals easily on Bixy Stays. Discover your perfect stay with us today! Read our blog for travel tips, destination guides, and the latest updates on our offerings.",
   logo: {
-    src: '/logo.svg',
-    srcDark: '/logo.svg',       // Used when strategy is 'switch'
-    alt: 'Cooper Logo',
-    strategy: 'invert' as 'invert' | 'switch' | 'static', // 'invert' | 'switch' | 'static'
+    src: "/logo.svg",
+    srcDark: "/logo.svg", // Used when strategy is 'switch'
+    alt: "Bixy Stays Logo",
+    strategy: "invert" as "invert" | "switch" | "static", // 'invert' | 'switch' | 'static'
   },
-  ogImage: '/og-image.webp',
-  primaryColor: '#00008B', // Default primary color
+  ogImage: "/og-image.webp",
+  primaryColor: "#00008B", // Default primary color
   search: {
     enabled: true,
-  },
-  announcement: {
-    enabled: true,
-    id: 'upgrade_v1_1_0', // Change this ID to reshow the banner
-    link: '/changelog',
-    localizeLink: true, // Set to true to apply i18n routing to the link, false for external/absolute links
   },
   blog: {
     postsPerPage: 6,
   },
   contact: {
     email: {
-      support: 'support@interstellar.com',
-      sales: 'sales@interstellar.com',
+      support: "info@bixxxy.com",
+      sales: "info@bixxxy.com",
     },
     phone: {
-      main: '+1 (555) 123-4567',
-      label: 'Mon-Fri 9am-6pm PST'
+      main: "+256 782 009 476",
+      label: "Mon-Fri 9am-5pm EAT",
     },
     address: {
-      city: 'Endurance',
-      full: 'Interstellar Space Station'
-    }
+      city: "Kampala",
+      full: "Kampala, Uganda",
+    },
   },
   analytics: {
-    alwaysLoad: import.meta.env.ANALYTICS_ALWAYS_LOAD === 'true',
+    alwaysLoad: import.meta.env.ANALYTICS_ALWAYS_LOAD === "true",
     vendors: {
       googleAnalytics: {
-        id: import.meta.env.GA_ID || '',
-        enabled: import.meta.env.GA_ENABLED === 'true',
+        id: import.meta.env.GA_ID || "",
+        enabled: import.meta.env.GA_ENABLED === "true",
       },
       rybbit: {
-        id: import.meta.env.RYBBIT_ID || '',
-        src: import.meta.env.RYBBIT_SRC || 'https://rybbit.example.com/api/script.js',
-        enabled: import.meta.env.RYBBIT_ENABLED === 'true',
+        id: import.meta.env.RYBBIT_ID || "",
+        src:
+          import.meta.env.RYBBIT_SRC ||
+          "https://rybbit.example.com/api/script.js",
+        enabled: import.meta.env.RYBBIT_ENABLED === "true",
       },
       umami: {
-        id: import.meta.env.UMAMI_ID || '',
-        src: import.meta.env.UMAMI_SRC || 'https://analytics.umami.is/script.js',
-        enabled: import.meta.env.UMAMI_ENABLED === 'true',
+        id: import.meta.env.UMAMI_ID || "",
+        src:
+          import.meta.env.UMAMI_SRC || "https://analytics.umami.is/script.js",
+        enabled: import.meta.env.UMAMI_ENABLED === "true",
       },
     },
   },
   dateOptions: {
     localeMapping: {
-        'ar': 'ar-TN', // Force Maghreb Arabic date format (e.g., جانفي instead of يناير)
-        'en': 'en-GB', // Example: Force UK English date format
-    }
-  }
+      en: "en-GB", // Example: Force UK English date format
+    },
+  },
 };
 
 export const NAV_LINKS = [
-  { 
-    href: '/features', 
-    label: 'Product',
+  {
+    href: "/features",
+    label: "Product",
     children: [
-        { href: '/features', label: 'Features', description: 'What makes us different', icon: 'Zap' },
-        { href: '/pricing', label: 'Pricing', description: 'Plans for every team', icon: 'CreditCard' },
-    ]
+      {
+        href: "https://landlord.bixyrentals.com/features",
+        label: "Features",
+        description: "What makes us different",
+        icon: "Zap",
+        localize: false,
+      },
+      {
+        href: "https://landlord.bixxxy.com/pricing",
+        label: "Pricing",
+        description: "Simple, transparent commission-based pricing",
+        icon: "CreditCard",
+        localize: false,
+      },
+    ],
   },
-  { 
-    href: '/docs', 
-    label: 'Resources',
+  {
+    href: "/docs",
+    label: "Resources",
     children: [
-        { href: '/docs/getting-started', label: 'Docs', description: 'Start building today', icon: 'Book', localize: false },
-        { href: '/blog', label: 'Blog', description: 'Latest updates & guides', icon: 'Newspaper' },
-        { href: '/changelog', label: 'Changelog', description: 'New features & fixes', icon: 'FileClock' },
-    ]
+      {
+        href: "https://landlord.bixyrentals.com/get-started",
+        label: "Docs",
+        description: "Guides and tutorials to get you started",
+        icon: "Book",
+        localize: false,
+      },
+      {
+        href: "/blog",
+        label: "Blog",
+        description: "Latest updates & guides",
+        icon: "Newspaper",
+      },
+    ],
   },
-  { 
-    href: '/portfolio', 
-    label: 'Work',
+  {
+    href: "/about",
+    label: "Company",
     children: [
-        { href: '/portfolio', label: 'All Projects', description: 'Our complete portfolio', icon: 'LayoutGrid' },
-        { href: '/design', label: 'Design System', description: 'Style guide & tokens', icon: 'Palette' },
-    ]
-  },
-  { 
-    href: '/about', 
-    label: 'Company',
-    children: [
-        { href: '/about', label: 'About', description: 'Our story & mission', icon: 'Building2' },
-        { href: '/contact', label: 'Contact', description: 'Get in touch with us', icon: 'Mail' },
-    ]
+      {
+        href: "https://landlord.bixyrentals.com/about",
+        label: "About",
+        description: "Our story & mission",
+        icon: "Building2",
+        localize: false,
+      },
+      {
+        href: "https://bixyrentals.com/inquiries",
+        label: "Contact",
+        description: "Get in touch with us",
+        icon: "Mail",
+        localize: false,
+      },
+    ],
   },
 ];
 
 export const ACTION_LINKS = {
-  primary: { label: 'Get Started', href: '/docs/getting-started' },
-  social: { 
-    twitter: 'https://twitter.com/gladtek',
-    linkedin: 'https://linkedin.com/company/gladtek',
-    github: 'https://github.com/gladtek',
-    youtube: 'https://youtube.com/@gladtek',
-    facebook: 'https://facebook.com/gladtek'
-    
-  }
+  primary: { label: "Get Started", href: "/docs/getting-started" },
+  social: {
+    linkedin: "https://www.linkedin.com/company/bixy-stays",
+    github: "https://github.com/Bixy-Rentals",
+    instagram: "https://www.instagram.com/bixystays",
+    facebook: "https://www.facebook.com/people/Bixy-Rentals/61582636832817",
+  },
 };
 
 export const FOOTER_LINKS = {
   product: {
-    title: 'Product',
+    title: "Product",
     links: [
-      { href: '/features', label: 'Features' },
-      { href: '/about', label: 'About' },
-      { href: '/pricing', label: 'Pricing' },
-      { href: '/changelog', label: 'Changelog' },
+      {
+        href: "https://landlord.bixyrentals.com/about",
+        label: "About",
+        localize: false,
+      },
+      {
+        href: "https://landlord.bixxxy.com/pricing",
+        label: "Pricing",
+        localize: false,
+      },
+      {
+        href: "https://landlord.bixyrentals.com/features",
+        label: "Features",
+        localize: false,
+      },
     ],
   },
   legal: {
-    title: 'Legal',
+    title: "Legal",
     links: [
-      { href: '/privacy', label: 'Privacy', localize: false },
-      { href: '/terms', label: 'Terms', localize: false }
+      {
+        href: "https://landlord.bixyrentals.com/policies/privacy",
+        label: "Privacy",
+        localize: false,
+      },
+      {
+        href: "https://landlord.bixyrentals.com/policies/terms",
+        label: "Terms",
+        localize: false,
+      },
     ],
   },
 };
