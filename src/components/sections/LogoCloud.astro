@@ -24,6 +24,7 @@ const { title = "Trusted by industry leaders", logos = [] } = Astro.props;
                  <Image
                     class="h-12 object-contain w-auto"
                     src={logo.src}
+                    inferSize={true}
                     alt={logo.name}
                     width={128}
                     height={48}

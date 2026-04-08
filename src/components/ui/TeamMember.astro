@@ -26,6 +26,7 @@ const { name, role, image, twitter, github, linkedin } = Astro.props;
     ) : (
         <Image 
             src={image} 
+            inferSize={true}
             alt={name} 
             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 hover:scale-110" 
         />
