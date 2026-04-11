@@ -24,6 +24,10 @@ export async function getStaticPaths({
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
   );
 
+  if (posts.length === 0) {
+    return [];
+  }
+
   return Object.keys(languages).flatMap((lang) => {
     const filteredPosts = posts.filter((post) =>
       post.id.startsWith(`${lang}/`),
