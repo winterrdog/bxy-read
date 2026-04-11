@@ -10,8 +10,9 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "build:cloudflare": "cross-env ADAPTER=cloudflare astro build",
+    "clean": "rm -rf dist",
     "preview": "astro preview",
+    "build:cloudflare": "npm run clean && astro build",
     "deploy": "npm run build:cloudflare && wrangler pages deploy ./dist --project-name=\"blog-deployment\"",
     "astro": "astro"
   },
